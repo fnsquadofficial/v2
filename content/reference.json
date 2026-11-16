@@ -1,0 +1,190 @@
+{
+  "links": {
+    "whatsappChannelUrl": "https://whatsapp.com/channel/0029VaofEGQCcW4rLi3dgk1A",
+    "whatsappGroupUrl": "https://chat.whatsapp.com/E0Z4puJdXR8HhRcjoce3h6?s=cl&p=a&iam=2",
+    "updatesChannelUrl": "https://whatsapp.com/channel/0029Vb9OKJg2Jl8JxUVwxM31",
+    "minecraftWhatsappUrl": "https://chat.whatsapp.com/KSmYT7l78lNAZNkuFx1spC?s=cl&p=a&iam=2",
+    "socialLinks": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/fnsquadofficial"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/fnsquad.official/"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/@fnsquadofficial"
+      },
+      {
+        "name": "X",
+        "url": "https://x.com/fnsquadofficial"
+      },
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/profile.php?id=61595614705712"
+      },
+      {
+        "name": "Threads",
+        "url": "https://www.threads.com/@fnsquad.official"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/user/31y4tkk2yk4c2oseu5yisollgr6u?si=1c5bc02150514449"
+      },
+      {
+        "name": "TikTok",
+        "url": "https://www.tiktok.com/@fnsquadofficial?is_from_webapp=1&sender_device=pc"
+      }
+    ],
+    "discordInviteUrl": "https://discord.gg/ymyZtpTqdr",
+    "minecraftServerAddress": "",
+    "minecraftEdition": "",
+    "minecraftVersion": "",
+    "serverStatusUrl": ""
+  },
+  "updated": "2026-11-14",
+  "stories": [
+    {
+      "date": "2026-11-12",
+      "category": "news trending tech",
+      "title": "Samsung confirms Gemini-powered smart eyewear for December",
+      "body": "Samsung says its first intelligent eyewear range, developed with Google and featuring designs from Gentle Monster and Warby Parker, will launch in selected markets from 10 December. The announced launch covers the US and South Korea; Malaysian availability has not been confirmed in this announcement.",
+      "source": "Samsung Global Newsroom",
+      "sourceUrl": "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world",
+      "sourceType": "Company announcement",
+      "id": "samsung-eyewear-2026-11-12"
+    },
+    {
+      "date": "2026-11-12",
+      "category": "news trending tech",
+      "title": "Google announces Gemini 4 Hydrogen upgrade for Search",
+      "body": "Google says its new Gemini 4 Hydrogen model is being introduced to Search globally, with improved handling of complex, multi-part questions and more structured visual answers. These are Google's announced capabilities, not an independent performance assessment.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "sourceType": "Company announcement",
+      "id": "google-search-gemini-4-hydrogen-2026-11-12"
+    },
+    {
+      "date": "2026-11-12",
+      "category": "news gaming tech",
+      "title": "Roblox explains how it reports suspected harm to authorities",
+      "body": "In a new safety update, Roblox describes its reporting process, chat safeguards, age checks and work with child-safety organisations. Its chief safety officer says the company also reports suspected child exploitation to the appropriate reporting channels. The figures and practices are Roblox's own account.",
+      "source": "Roblox Newsroom",
+      "sourceUrl": "https://about.roblox.com/newsroom/2026/11/robloxs-process-for-reporting-to-law-enforcement",
+      "sourceType": "Company statement",
+      "id": "roblox-safety-reporting-2026-11-12"
+    },
+    {
+      "date": "2026-11-12",
+      "category": "news entertainment trending",
+      "title": "Netflix greenlights new Korean period romance starring Kim Go-eun",
+      "body": "Netflix has announced The Twilight Between Us, a historical romance-action drama starring Kim Go-eun and Gang Dong-won. Director Kim Won-suk and writer Park Ji-eun lead the production. Netflix says the series is coming soon but has not given a premiere date in this announcement.",
+      "source": "About Netflix",
+      "sourceUrl": "https://about.netflix.com/en/news/the-twilight-between-us-announcement",
+      "sourceType": "Company announcement",
+      "id": "netflix-twilight-2026-11-12"
+    },
+    {
+      "date": "2026-11-12",
+      "category": "news malaysia trending",
+      "title": "Malaysia's student associations allowed direct donation accounts, minister says",
+      "body": "The Star reports that Higher Education Minister Zambry Abd Kadir said student associations may open their own bank accounts to receive contributions. He also described planned changes to university legislation. Individual associations should still confirm their institution's banking procedures.",
+      "source": "The Star",
+      "sourceUrl": "https://www.thestar.com.my/news/nation/2026/11/12/student-groups-can-now-get-direct-donations",
+      "sourceType": "Reported by news outlet",
+      "id": "malaysia-student-banks-2026-11-12"
+    },
+    {
+      "date": "2026-11-12",
+      "category": "news malaysia",
+      "title": "Ministry says over 99% of matriculation graduates secured public university places",
+      "body": "According to a parliamentary reply reported by The Star, more than 99% of students completing Malaysia's matriculation programme obtained public university placements each year from the 2020/21 to 2025/26 academic sessions, subject to programme requirements and capacity.",
+      "source": "The Star",
+      "sourceUrl": "https://www.thestar.com.my/news/nation/2026/11/12/over-99-of-matriculation-graduates-secure-public-university-places-annually",
+      "sourceType": "Reported by news outlet",
+      "id": "matriculation-university-2026-11-12"
+    },
+    {
+      "date": "2026-11-10",
+      "category": "news gaming trending",
+      "title": "PlayStation reveals November Plus catalog lineup",
+      "body": "Sony's November PlayStation Plus catalog announcement includes Death Stranding 2: On the Beach, Like a Dragon: Pirate Yakuza in Hawaii, Atomfall and Dragon Quest III HD-2D Remake. The main catalog is scheduled from 17 November, with exceptions; availability can vary by region and subscription tier.",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/10/playstation-plus-game-catalog-for-november-death-stranding-2-on-the-beach-like-a-dragon-pirate-yakuza-in-hawaii-atomfall-dragon-quest-iii-hd-2d-remake-and-more/",
+      "sourceType": "Official lineup",
+      "id": "playstation-plus-november-2026-11-10"
+    },
+    {
+      "date": "2026-11-10",
+      "category": "news gaming",
+      "title": "Minecraft Bedrock Preview 26.70.24 brings more fixes for 2026's fourth drop",
+      "body": "Mojang published Bedrock Preview and Beta 26.70.24 with more experimental fixes, including changes involving brittle ice and creative-inventory placement. This is a test release rather than the stable game update; preview features may change before full release.",
+      "source": "Minecraft Feedback / Mojang",
+      "sourceUrl": "https://feedback.minecraft.net/hc/en-us/articles/50285693907213-Minecraft-Beta-Preview-26-70-24",
+      "sourceType": "Official release notes",
+      "id": "minecraft-preview-267024-2026-11-10"
+    },
+    {
+      "date": "2026-11-09",
+      "category": "news gaming trending",
+      "title": "Roblox publishes CEO's interview with community outlet Bloxy News",
+      "body": "Roblox has released a transcript of an interview between founder and CEO David Baszucki and Bloxy News, answering questions selected from the Roblox community. The company says a recording issue led it to publish the conversation as text with screenshots.",
+      "source": "Roblox Newsroom",
+      "sourceUrl": "https://about.roblox.com/en-au/newsroom/2026/11/david-baszucki-sits-down-with-bloxy-news",
+      "sourceType": "Company publication",
+      "id": "roblox-ceo-bloxy-interview-2026-11-09"
+    },
+    {
+      "date": "2026-11-08",
+      "category": "news sports trending",
+      "title": "Norris wins wet São Paulo GP as Mercedes clinch 2026 constructors' title",
+      "body": "Lando Norris won a rain-affected São Paulo Grand Prix ahead of Max Verstappen and Isack Hadjar. George Russell and Kimi Antonelli finished fourth and fifth, securing Mercedes the 2026 Constructors' Championship. The official F1 race report confirms the result.",
+      "source": "Formula 1",
+      "sourceUrl": "https://www.formula1.com/en/latest/article/norris-beats-verstappen-in-wet-sao-paulo-gp-thriller-as-mercedes-win-constructors-championship.7JN7MXLZf5lk5l0C3gfKGI",
+      "sourceType": "Official race report",
+      "id": "f1-brazil-2026-11-08"
+    },
+    {
+      "date": "2026-11-07",
+      "category": "news sports",
+      "title": "Formula 1 extends its São Paulo Grand Prix agreement through 2035",
+      "body": "F1 has confirmed a five-year extension that keeps the São Paulo Grand Prix at Interlagos on the calendar through 2035. The announcement secures a long-term place for the Brazilian venue; it is not an announcement about any Malaysian Grand Prix return.",
+      "source": "Formula 1",
+      "sourceUrl": "https://www.formula1.com/en/latest/article/formula-1-to-race-in-sao-paulo-through-to-2035-following-new-five-year-contract-extension.3RBVXeLDp6NMDUQSAIX8TL",
+      "sourceType": "Official announcement",
+      "id": "f1-interlagos-2035-2026-11-07"
+    },
+    {
+      "date": "2026-11-05",
+      "category": "news entertainment trending",
+      "title": "Netflix launches a dedicated KPop Demon Hunters fan hub",
+      "body": "Netflix has introduced KPop Demon Hunters: For the Fans!, bringing together special videos, sing-along content, official choreography and stop-motion shorts in one collection. Netflix announced the new hub on 5 November; content availability may depend on the region.",
+      "source": "About Netflix",
+      "sourceUrl": "https://about.netflix.com/en/news/kpop-demon-hunters-for-the-fans-destination",
+      "sourceType": "Company announcement",
+      "id": "netflix-kpop-fans-2026-11-05"
+    },
+    {
+      "date": "2026-11-04",
+      "category": "news gaming",
+      "title": "Minecraft details November 2026's Marketplace Pass additions",
+      "body": "Minecraft's official monthly roundup previews games, add-ons and texture packs joining Marketplace Pass in November. Featured additions include themed experiences and building options. Check Mojang's listing for the exact items and your platform's availability.",
+      "source": "Minecraft.net / Mojang",
+      "sourceUrl": "https://www.minecraft.net/en-us/article/marketplace-content-november-2026",
+      "sourceType": "Official blog",
+      "id": "minecraft-marketplace-nov-2026"
+    },
+    {
+      "date": "2026-11-03",
+      "category": "news tech entertainment",
+      "title": "Netflix tests an AI-powered discovery tab for finding shows",
+      "body": "Netflix is testing AI Discover, a TV-app tab where a small group of US members can explore viewing suggestions by mood and theme. The announcement describes an early test, not a feature currently available to every subscriber or market.",
+      "source": "About Netflix",
+      "sourceUrl": "https://about.netflix.com/en/news/introducing-ai-discover",
+      "sourceType": "Company announcement",
+      "id": "netflix-ai-discover-2026-11-03"
+    }
+  ]
+}
