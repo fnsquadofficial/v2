@@ -2,6 +2,7 @@
 import argparse
 import html
 import json
+import re
 from datetime import date
 from pathlib import Path
 from urllib.parse import quote
@@ -13,7 +14,9 @@ CONFIG = DATA["links"]
 EMAIL = "fnsquadofficial@gmail.com"
 DISCORD = CONFIG["discordInviteUrl"]
 HOME = "/"
-PAGES_ORIGIN = "https://fnsquadofficial.github.io"
+PAGES_BASE_PATH = "/v2"
+PAGES_URL = f"https://fnsquadofficial.github.io{PAGES_BASE_PATH}"
+ROOT_LINK = re.compile(r'(\b(?:href|src)=")(/(?!/)[^"]*)')
 NAV = {"Home": HOME, "FreakyNews": "/freakynews/", "FN SMP": "/fn-smp/", "Community": "/community/", "About": "/about/"}
 SUPPORT = {"Help centre": "/help/", "Contact": "/contact/", "Policies": "/legal/", "Privacy": "/privacy/"}
 GROUP_NOTE = "Other group members can see your phone number."
@@ -84,7 +87,7 @@ def navigation(routes, current=""):
 def layout(route, title, description, body, *, public=False, error=False):
     name = title if route == "/" else f"{title} · FN Squad"
     og_image = "og-fn-smp.png" if route == "/fn-smp/" else "og-fn-squad.png"
-    origin = PAGES_ORIGIN if public else ""
+    origin = PAGES_URL if public else ""
     indexing = '<meta name="robots" content="noindex, nofollow">'
     if public and not error:
         indexing = f'<link rel="canonical" href="{origin}{route}">\n  <meta property="og:url" content="{origin}{route}">'
@@ -457,22 +460,30 @@ PAGES = [
 
 def build(output, public):
     pages = [*PAGES, ("/privacy/", "Privacy notice", "Website privacy, third-party platforms and data requests.", lambda: privacy(public))]
+    base_path = PAGES_BASE_PATH if public else ""
+
+    def write_page(path, document):
+        # Templates use site-relative paths. Mount navigation and assets under the Pages project path.
+        if base_path:
+            document = ROOT_LINK.sub(lambda link: f"{link[1]}{base_path}{link[2]}", document)
+        path.write_text(document, encoding="utf-8")
+
     for route, title, description, render in pages:
         directory = output / route.strip("/")
         directory.mkdir(parents=True, exist_ok=True)
-        (directory / "index.html").write_text(layout(route, title, description, render(), public=public), encoding="utf-8")
+        write_page(directory / "index.html", layout(route, title, description, render(), public=public))
         if route != "/":
             legacy = output / (route.strip("/") + ".html")
-            canonical = f'<link rel="canonical" href="{PAGES_ORIGIN}{route}">' if public else ""
-            legacy.write_text(f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="{'noindex, follow' if public else 'noindex, nofollow'}">{canonical}<title>{esc(title)} · FN Squad</title><noscript><meta http-equiv="refresh" content="0; url={route}"></noscript></head>
-<body><p>This page has moved. <a id="destination" href="{route}">Continue to {esc(title)}</a>.</p><script>const target = document.getElementById("destination"); window.location.replace(target.href + window.location.search + window.location.hash);</script></body></html>''', encoding="utf-8")
-    (output / "404.html").write_text(layout("/404/", "Page not found", "Find your way back to FN Squad.", intro("404", "Page not found", "The link may have moved. Try the homepage or the official community directory.", button("Back to FN Squad", "/", "ink") + button("Official links", "/community/#official-links")), public=public, error=True), encoding="utf-8")
+            canonical = f'<link rel="canonical" href="{PAGES_URL}{route}">' if public else ""
+            write_page(legacy, f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="{'noindex, follow' if public else 'noindex, nofollow'}">{canonical}<title>{esc(title)} · FN Squad</title><noscript><meta http-equiv="refresh" content="0; url={base_path}{route}"></noscript></head>
+<body><p>This page has moved. <a id="destination" href="{route}">Continue to {esc(title)}</a>.</p><script>const target = document.getElementById("destination"); window.location.replace(target.href + window.location.search + window.location.hash);</script></body></html>''')
+    write_page(output / "404.html", layout("/404/", "Page not found", "Find your way back to FN Squad.", intro("404", "Page not found", "The link may have moved. Try the homepage or the official community directory.", button("Back to FN Squad", "/", "ink") + button("Official links", "/community/#official-links")), public=public, error=True))
     sitemap = output / "sitemap.xml"
     if public:
-        urls = "".join(f"  <url><loc>{PAGES_ORIGIN}{route}</loc></url>\n" for route, *_ in pages)
+        urls = "".join(f"  <url><loc>{PAGES_URL}{route}</loc></url>\n" for route, *_ in pages)
         sitemap.write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + '</urlset>\n', encoding="utf-8")
-        robots = f"User-agent: *\nAllow: /\nSitemap: {PAGES_ORIGIN}/sitemap.xml\n"
+        robots = f"User-agent: *\nAllow: {PAGES_BASE_PATH}/\nSitemap: {PAGES_URL}/sitemap.xml\n"
     else:
         sitemap.unlink(missing_ok=True)
         robots = "User-agent: *\nDisallow: /\n"

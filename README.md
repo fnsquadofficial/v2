@@ -1,22 +1,24 @@
-# FN Squad · GitHub Pages
+# FN Squad V2
 
-This release targets the root of `https://fnsquadofficial.github.io/`.
+This repository builds the project site at [fnsquadofficial.github.io/v2/](https://fnsquadofficial.github.io/v2/).
 
-## Deploy after review
+## Deploy from GitHub
 
-1. Extract the ZIP into a review branch of the existing `fnsquadofficial.github.io` repository. Copy the hidden `.github/` directory too. This replaces the existing `.github/workflows/pages.yml`.
-2. Review the changes. In GitHub, check **Settings → Pages → Build and deployment** and use **GitHub Actions** as the source.
-3. Merge into `main` when ready to publish. The Pages workflow rebuilds the public site and uploads `dist/`. Watch the **Actions** tab for the deployed URL.
+1. Add the release files to the root of `fnsquadofficial/v2` and commit them to `main`. The workflow belongs at `.github/workflows/pages.yml`.
+2. In the repository, open **Settings → Pages**. Under **Build and deployment**, set **Source** to **GitHub Actions**. Leave **Custom domain** blank for the default project URL.
+3. Open **Actions → Deploy to GitHub Pages → Run workflow**. Select `main` and run it.
+4. Open the deployment URL from the successful run.
 
-The archive also contains a prebuilt `dist/`, including the old `.html` aliases, `404.html`, canonical URLs and a public sitemap.
+The workflow runs when you start it in **Actions**. Run it again after committing a new release. It builds the public pages and uploads `dist/`.
 
-## Edit and preview locally
+## Build and preview locally
 
-The site is static. Edit page templates in `build.py`, links and stories in `content/reference.json`, and styles, scripts and assets in `dist/`.
+Edit page templates in `build.py`, links and stories in `content/reference.json`, and styles, scripts and assets in `dist/`.
 
 ```sh
 python3 build.py --target github-pages
-python3 -m http.server --directory dist 8000
+python3 -c "from shutil import copytree; copytree('dist', '.preview/v2', dirs_exist_ok=True)"
+python3 -m http.server --directory .preview 8000
 ```
 
-Open `http://localhost:8000/` in your browser. The public build includes the GitHub Pages hosting notice in English and Bahasa Melayu. The CSS and platform logos load locally.
+Open [localhost:8000/v2/](http://localhost:8000/v2/). The `v2/` path matches the hosted site. Keep the temporary `.preview/` folder out of commits.

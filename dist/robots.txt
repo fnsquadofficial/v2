@@ -1,3 +1,3 @@
 User-agent: *
-Allow: /
-Sitemap: https://fnsquadofficial.github.io/sitemap.xml
+Allow: /v2/
+Sitemap: https://fnsquadofficial.github.io/v2/sitemap.xml
