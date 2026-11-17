@@ -464,3 +464,14 @@ code { color:var(--ink);border-radius:4px;padding:1px 4px;background:var(--panel
 @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after { transition:none!important;scroll-behavior:auto!important }
 }
+
+/* Featured official social accounts, shared across every page. */
+.footer-socials { margin-top:24px;padding-top:20px;border-top:1px solid var(--stroke) }
+.footer-socials h2 { margin:0 0 12px;font-size:1rem }
+.footer-social-links { display:flex;flex-wrap:wrap;gap:10px }
+.footer-social-link,.footer-social-more { display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:9px 14px;border:1px solid var(--stroke);border-radius:10px;color:var(--ink);text-decoration:none;font-size:.85rem }
+.footer-social-link { background:var(--surface) }
+.footer-social-link .platform-icon { width:20px;height:20px }
+.footer-social-link:hover,.footer-social-more:hover { background:var(--glass-hover);text-decoration:underline }
+.footer-social-link:focus-visible,.footer-social-more:focus-visible { outline:2px solid currentColor;outline-offset:3px }
+@media(max-width:480px) { .footer-social-links { display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) }.footer-social-more { grid-column:1/-1 }.footer-social-link { padding:9px 8px } }

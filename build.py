@@ -84,6 +84,12 @@ def navigation(routes, current=""):
     return "".join(f'<a href="{url}"' + (' aria-current="page"' if url == current else '') + f'>{title}</a>' for title, url in routes.items())
 
 
+def footer_socials():
+    accounts = {item["name"]: item["url"] for item in CONFIG["socialLinks"]}
+    featured = ("Instagram", "TikTok", "YouTube", "Facebook")
+    return "".join(link(name, accounts[name], cls="footer-social-link", mark=name.lower()) for name in featured)
+
+
 def layout(route, title, description, body, *, public=False, error=False):
     name = title if route == "/" else f"{title} · FN Squad"
     og_image = "og-fn-smp.png" if route == "/fn-smp/" else "og-fn-squad.png"
@@ -135,7 +141,7 @@ def layout(route, title, description, body, *, public=False, error=False):
       <nav aria-label="Support and policies"><h2>Support &amp; policies</h2>{navigation(support_links)}</nav>
       <nav aria-label="Community platforms"><h2>Connect</h2>{link("Discord", DISCORD, mark="discord")}{link("WhatsApp directory", "/community/#official-links", mark="whatsapp")}{link("Social accounts", "/community/#socials")}</nav>
     </div>
-    <div class="footer-bottom"><span>© FN Squad</span><span>Platform names and marks identify their respective services.</span></div>
+    <nav class="footer-socials" aria-label="Follow FN Squad"><h2>Follow FN Squad</h2><div class="footer-social-links">{footer_socials()}{link("All social accounts", "/community/#socials", cls="footer-social-more", arrow=True)}</div></nav>\n    <div class="footer-bottom"><span>© FN Squad</span><span>Platform names and marks identify their respective services.</span></div>
   </div></footer>
 </body></html>"""
 
