@@ -27,6 +27,11 @@ jobs:
         run: |
           python3 build.py --target github-pages
           install -Dm644 docs/fn-squad-public-transparency-policy.md dist/docs/fn-squad-public-transparency-policy.md
+      - name: Validate the public site
+        run: |
+          python3 scripts/check_site.py
+          node --check dist/app.js
+          node --check dist/theme.js
       - name: Upload the static site
         uses: actions/upload-pages-artifact@v4
         with:
@@ -34,3 +39,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+

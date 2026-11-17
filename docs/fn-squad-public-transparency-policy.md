@@ -1,10 +1,11 @@
 # FN Squad — Public Transparency and Privacy Governance Statement
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Published:** 13 November 2026  
+**Website references updated:** 17 November 2026  
 **Owner:** FN Squad (independent Malaysia-based community)  
-**Official site:** https://fnsquadofficial.github.io/  
-**Privacy notice:** https://fnsquadofficial.github.io/privacy/
+**Official site:** https://fnsquadofficial.github.io/v2/  
+**Privacy notice:** https://fnsquadofficial.github.io/v2/privacy/
 
 > **Scope and assurance:** This is a public-facing statement of FN Squad's privacy principles, current website facts, and governance commitments. It is not a certification, statutory registration, regulator approval, or assertion of universal compliance. Compliance depends on applicable law and demonstrated operations. FN Squad's full internal operations handbook is not public, to protect staff and members.
 
@@ -32,9 +33,9 @@ FN Squad does not sell personal data. It may need to disclose limited data to re
 
 People may ask about data held by FN Squad, correct inaccurate information, request deletion and enquire about retention and disclosures. Depending on the law, additional rights can include objection, restriction, data portability and consent withdrawal. A request may be limited where evidence must be retained for lawful safety, ongoing investigation or legal reasons.
 
-**Current contact routes:** email FN Squad at **fnsquadofficial@gmail.com** (https://fnsquadofficial.github.io/contact/) or privately message an FN Squad Admin or Moderator through the official Discord community: https://discord.gg/ymyZtpTqdr. Ask for the team member handling privacy enquiries. Do not post private evidence to public chats, GitHub issues or social comments.
+**Current contact routes:** email FN Squad at **fnsquadofficial@gmail.com** (https://fnsquadofficial.github.io/v2/contact/) or privately message an FN Squad Admin or Moderator through the official Discord community: https://discord.gg/ymyZtpTqdr. Ask for the team member handling privacy enquiries. Do not post private evidence to public chats, GitHub issues or social comments.
 
-**Remaining governance items:** the official inbox is public and the four-person creator leadership is listed at https://fnsquadofficial.github.io/about/. A formally designated privacy officer, the operating entity's legal status, confirmed request-handling controls and an implemented retention schedule have not yet been established in this public review. The published leadership titles are internal community roles, not evidence of incorporation.
+**Remaining governance items:** the official inbox is public and the four-person creator leadership is listed at https://fnsquadofficial.github.io/v2/about/. A formally designated privacy officer, the operating entity's legal status, confirmed request-handling controls and an implemented retention schedule have not yet been established in this public review. The published leadership titles are internal community roles, not evidence of incorporation.
 
 Malaysia's Personal Data Protection Commissioner / JPDP: https://www.pdp.gov.my/  
 Malaysian Communications and Multimedia Commission complaints portal: https://aduan.mcmc.gov.my/  
@@ -100,3 +101,4 @@ This statement will be reviewed when practices or laws materially change. The pu
 - ISO — https://www.iso.org/
 
 *Public governance statement — version 1.0 (13 November 2026). The internal FN Squad operations handbook is a separate restricted document.*
+

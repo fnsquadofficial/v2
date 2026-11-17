@@ -28,3 +28,16 @@ python3 -m http.server --directory .preview 8000
 ```
 
 Open [localhost:8000/v2/](http://localhost:8000/v2/). The `v2/` path matches the hosted site. Keep the temporary `.preview/` folder out of commits.
+
+
+## Deployment validation
+
+Before uploading, the workflow checks generated HTML for missing local files, broken section links, duplicate IDs, missing image alt attributes and URLs outside `/v2/`. It also checks JavaScript syntax. To run these checks locally after building:
+
+```sh
+python3 scripts/check_site.py
+node --check dist/app.js
+node --check dist/theme.js
+```
+
+The domain-root `robots.txt` is managed in `fnsquadofficial/fnsquadofficial.github.io` and advertises the V2 sitemap. The copy under `/v2/robots.txt` is informational; crawlers use the host-root file.

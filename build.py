@@ -35,10 +35,11 @@ WHATSAPP_CHANNELS = "https://faq.whatsapp.com/1318001139066835"
 WHATSAPP_GROUPS = "https://faq.whatsapp.com/3307102709559968/"
 DISCORD_PRIVACY = "https://discord.com/privacy"
 DISCORD_AGE = "https://support.discord.com/hc/en-us/articles/360040724612-Why-is-Discord-asking-for-my-birthday"
-PUBLIC_POLICY = "https://github.com/fnsquadofficial/fnsquadofficial.github.io/blob/main/docs/fn-squad-public-transparency-policy.md"
+PUBLIC_POLICY = "https://github.com/fnsquadofficial/v2/blob/main/docs/fn-squad-public-transparency-policy.md"
 ARCHIVE = "https://faizzzlol.github.io/freakyniggas/"
 ARCHIVE_HISTORY = "https://github.com/faizzzlol/freakyniggas/commits/"
-PUBLIC_SOURCE = "https://github.com/FNSquadOfficial/fnsquadofficial.github.io"
+PUBLIC_SOURCE = "https://github.com/fnsquadofficial/v2"
+PREVIOUS_SOURCE = "https://github.com/fnsquadofficial/fnsquadofficial.github.io"
 
 
 def esc(value):
@@ -358,18 +359,19 @@ def about():
           <div class="history-links">{link("Browse the archive", ARCHIVE, cls="text-link", arrow=True)}{link("Commit history", ARCHIVE_HISTORY, cls="text-link", arrow=True)}</div>
         </li>
         <li>
-          <span class="meta-label">Official FN Squad site</span>
+          <span class="meta-label">Previous FN Squad website</span>
           <h3>Into a community hub</h3>
-          <p>The current GitHub repository began in <time datetime="2026-10">October 2026</time>. It brought FreakyNews, FN SMP and community links together under the FN Squad name, using the monochrome FN identity, light and dark modes, and a frosted, floating menu.</p>
+          <p>The previous website’s GitHub repository began in <time datetime="2026-10">October 2026</time>. It brought FreakyNews, FN SMP and community links together under the FN Squad name, using the monochrome FN identity, light and dark modes, and a frosted, floating menu.</p>
           <p>The following updates added cleaner URLs, an official links directory and source links for FreakyNews.</p>
-          <div class="history-links">{link("Explore the public repository", PUBLIC_SOURCE, cls="text-link", arrow=True)}</div>
+          <div class="history-links">{link("Explore the previous repository", PREVIOUS_SOURCE, cls="text-link", arrow=True)}</div>
         </li>
         <li>
-          <span class="meta-label">Liquid Glass redesign</span>
+          <span class="meta-label">V2 · Current official website</span>
           <h3>A clearer way to explore</h3>
+          <p>All four leaders agreed to use V2 as the sole official FN Squad website, confirmed on <time datetime="2026-11-17">17 November 2026</time>. The earlier websites remain available as historical archives.</p>
           <p>The redesign builds on the frosted menu with a Liquid Glass header and controls that work in both themes. It reworks the mobile menu and social directory, with clearer paths to news, Minecraft and community help.</p>
           <p>FreakyNews search and topic filters run in the browser. Saved links to the old page URLs lead to the new pages.</p>
-          <div class="history-links">{link("Explore FreakyNews", "/freakynews/", cls="text-link", arrow=True)}{link("See official community links", "/community/#official-links", cls="text-link", arrow=True)}</div>
+          <div class="history-links">{link("Explore the V2 repository", PUBLIC_SOURCE, cls="text-link", arrow=True)}{link("Explore FreakyNews", "/freakynews/", cls="text-link", arrow=True)}{link("See official community links", "/community/#official-links", cls="text-link", arrow=True)}</div>
         </li>
       </ol>
       <aside class="craft-notes"><h3>Under the hood</h3><p>A small Python build script generates the static HTML from shared templates. CSS shapes the responsive layout and glass effects. JavaScript handles the menu, theme switch and news filters. Fonts and logos are served with the site, and the public build is packaged for GitHub Pages.</p></aside>
@@ -502,3 +504,4 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, default=DIST, help="Folder containing the site's static assets (default: dist).")
     args = parser.parse_args()
     build(args.output, public=args.target == "github-pages")
+
