@@ -1,4 +1,10 @@
-# FN Squad V2
+# FN Squad V2 — Official Website
+
+> **Sole official FN Squad website.** All four leaders agreed to use V2 as the current authoritative website, confirmed on 17 November 2026.
+>
+> **Official website:** https://fnsquadofficial.github.io/v2/
+>
+> The previous `fnsquadofficial/fnsquadofficial.github.io` website is superseded. The original-era `faizzzlol/freakyniggas` website is a historical archive. Future website development belongs in this repository.
 
 This repository builds the project site at [fnsquadofficial.github.io/v2/](https://fnsquadofficial.github.io/v2/).
 
